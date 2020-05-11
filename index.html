@@ -2,40 +2,140 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="index.css">
-        <title>Savings Calculator</title>
+        <link rel="stylesheet" href="w3-css.css">
+        <style>
+            body {
+                background-color: white;
+                width: 24cm;
+                height: 32cm;
+            }
+
+
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type=submit] {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            
+        </style>
+        <title>Research Worksheet Gen</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
 
     <body>
 
-        <div class="panel">
+        <div id="inputbox" class="panel">
             <div id="titling">
-                <h1>Eamonn's Savings Calculator</h1>
+                <h1>Mr. Eamonn's Mini Research Worksheet Maker</h1>
             </div>
 
             <div id="dataset">
-                <input type="text" id="name" name="firstname" placeholder="Your name..">
+                <input type="text" id="topic1" name="topic1" placeholder="Topic number 1">
 
-                <input type="text" id="salary" name="monthsalary" placeholder="Your monthly salary..">
+                <input type="text" id="topic2" name="topic2" placeholder="Topic number 2">
 
-                <label id="savelabel" for="save">20%</label>
-                <input type="range" id="save" name="percentsave" class="slider" min="1" max="100" value="20">
+                <input type="text" id="topic3" name="topic3" placeholder="Topic number 3">
 
-                <label id="monthslabel" for="months">12 months</label>
-                <input type="range" id="months" name="monthssave" class="slider" min="1" max="60" value="12">
+                <input type="text" id="topic4" name="topic4" placeholder="Topic number 4">
 
                 <input type="submit" name="submitall" id="submitall" value="submit">
             </div>
 
-            <div id="resultset">
-                <h3 id="resultname">Congratulations name!</h3>
-                <h3>You will be able to save:</h3>
-                <h3 id="totalsavings">10000000 won</h3>
-                <input type="submit" name="reset" id="resetbtn" value="reset">
+        </div>
+
+       
+        <div id="worksheet">
+            <div class="w3-container">
+                <div class="w3-button" id="printbtn">Print</div>
+                <div class="w3-button" id="resetbtn">Reset</div>
+            </div>
+        
+            <div id="worksheetbox">
+                <div class="worksheetbox">
+                    <div class="w3-row-padding">
+                        <h4 >Name: ________________  Teacher: ________________ Date: ________________</h4>
+                    </div>
+
+                    <br>
+
+                    <div class="w3-row-padding">
+                        <div class="w3-half w3-content w3-border">
+                            <div class="w3-border-bottom w3-center">
+                                <h3 id="title1">Topic 1</h3>
+                            </div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="drawbox w3-border"></div>
+                        </div>
+                
+                        <div class="w3-half w3-content w3-border" >
+                            <div class="w3-border-bottom w3-center">
+                                <h3 id="title2">Topic 2</h3>
+                            </div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="drawbox w3-border"></div>
+                        </div>
+                    </div>
+
+                    <div class="w3-row-padding">
+                        <div class="w3-half w3-content w3-border">
+                            <div class="w3-border-bottom w3-center">
+                                <h3 id="title3">Topic 3</h3>
+                            </div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="drawbox w3-border"></div>
+                        </div>
+                
+                        <div class="w3-half w3-content w3-border">
+                            <div class="w3-border-bottom w3-center">
+                                <h3 id="title4">Topic 4</h3>
+                            </div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="w3-border-bottom w3-border-blue w3-content w3-padding-small">&nbsp</div>
+                            <div class="drawbox w3-border"></div>
+                        </div>
+                    </div>
+                </div>
+                
+
             </div>
         </div>
+        
 
         <script src="app.js"></script>
 
