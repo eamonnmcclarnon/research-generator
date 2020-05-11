@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <title>Savings Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+
+        <div class="panel">
+            <div id="titling">
+                <h1>Eamonn's Savings Calculator</h1>
+            </div>
+
+            <div id="dataset">
+                <input type="text" id="name" name="firstname" placeholder="Your name..">
+
+                <input type="text" id="salary" name="monthsalary" placeholder="Your monthly salary..">
+
+                <label id="savelabel" for="save">20%</label>
+                <input type="range" id="save" name="percentsave" class="slider" min="1" max="100" value="20">
+
+                <label id="monthslabel" for="months">12 months</label>
+                <input type="range" id="months" name="monthssave" class="slider" min="1" max="60" value="12">
+
+                <input type="submit" name="submitall" id="submitall" value="submit">
+            </div>
+
+            <div id="resultset">
+                <h3 id="resultname">Congratulations name!</h3>
+                <h3>You will be able to save:</h3>
+                <h3 id="totalsavings">10000000 won</h3>
+                <input type="submit" name="reset" id="resetbtn" value="reset">
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+
+        
+    </body>
+
+</html>
